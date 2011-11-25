@@ -67,11 +67,9 @@ exports.hash = function (email) {
 
 exports.avatarURL = function (options) {
     options = options || {};
-    if (!(options.email || options.hash)) {
-        throw new Error('You must provide an email address or gravatar hash');
-    }
     var hash = options.hash || exports.hash(options.email);
     var params = {};
+
     if (options.size) {
         params.size = options.size;
     }
