@@ -90,6 +90,6 @@ exports.avatarURL = function (options) {
         ext = '.' + options.extension.replace(/^\./, '');
     }
     return (options.secure ? 'https://': '//') +
-            exports.BASE_AVATAR_URL + hash + ext + '?' +
+           exports.BASE_AVATAR_URL + hash + ext + '?' +
            querystring.stringify(params);
 };
